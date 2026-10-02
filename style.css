@@ -1,0 +1,217 @@
+body{
+    width:100vw;
+    height:100vh;
+    place-items: center;
+    align-content: center;
+    overflow: hidden;
+    font-family: sans-serif;
+}
+
+#books-list{
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: #b9b9b9 #f4f4f4;
+}
+
+h2{margin-bottom:4px;font-size:20px;}
+h3{margin-top:0;font-weight:400;font-size:16px;margin-bottom:6px;}
+
+#status-bar, #menu-bar, #filters, .book{
+    display:flex;
+    justify-content: space-between;
+    padding:5px 10px 5px 10px;
+    border-bottom:2px solid #b9b9b9;
+}
+#status-bar div{display:flex;gap:5px;height:20px;align-items: center;}
+
+
+.book{
+    margin: 0 5px 0 5px;
+    align-items:center;
+    text-align: left;
+}
+.book .info{
+    width:90%;
+    position:relative;
+}
+.card-pages{
+    width: 70%;
+    text-align: right;
+    display: flex;
+    gap:8px;
+    align-items:center;
+}
+.card-pages p{
+    margin:0;
+}
+.card-pages hr{
+    border-bottom: 3px dotted black !important;
+    width: 90%;
+    border: none;
+}
+#filters{border-bottom:0;}
+
+#filters>div{display:flex; flex-direction:row; align-items:center; gap:8px;}
+#filters .active{font-weight:700;}
+#right strong, .book .settings-container img{
+    cursor:pointer;
+}
+#left .select{
+    cursor: pointer;
+}
+#right select{
+    border: none;
+    background-color: transparent;
+    font-weight: 700;
+    text-transform: capitalize;
+    font-size: 16px;
+}
+#searchbar, #new-bar, #settingsbar{
+    display: flex;
+    align-items: center;
+    padding: 0 10px 0 10px;
+}
+#new-bar{
+    width:fit-content;
+    gap:8px;
+    cursor:pointer;
+    margin-right:35%;
+}
+#settingsbar{
+    width:5%;
+    justify-content: center;
+}
+#searchbar{
+    color:#b9b9b9;
+    border-left: 2px solid #b9b9b9;
+    border-right: 2px solid #b9b9b9;
+    width: 35%;
+}
+
+#kindle {
+    z-index:0;
+    display:grid;
+    grid-template-rows: 30px 90px 12fr;
+    height: 70vh;
+    width: 30vw;
+    border: 2.1vw solid #636363;
+    border-bottom: 6vw solid #7b7b7b;
+    border-radius: 25px;
+    position: relative;
+    background-color:#f4f4f4;
+}
+#kindle:after {
+    content: '';
+    width: 4vw;
+    height: 4vw;
+    background-image: url(https://ajaxson.no/logo.svg);
+    background-size: contain;
+    position: absolute;
+    bottom: -9vh;
+    left: 44%;
+}
+
+.settings-container{
+    position:relative;
+}
+.settings-menu{
+    position: absolute;
+    left: -110px;
+    top: -52px;
+    background-color: #e9e9e9;
+    padding: 5px 10px 5px 10px;
+    border: 2px solid #636363;
+    width: 110px;
+}
+.settings-menu p{
+    cursor:pointer;
+}
+
+.delete-button{
+    color:#ef3e3e;
+}
+.card-read-badge{
+    font-size: small;
+    font-weight: 700;
+    color: black;
+    background-color: #d7d7d7;
+    width: fit-content;
+    padding: 5px 10px 5px 10px;
+    border-radius: 8px;
+    position: absolute;
+    right: 0;
+    top: 35%;
+}
+
+#add-modal {
+    position: absolute;
+    top: 35%;
+    width: 65%;
+    height: auto;
+    background-color: #e9e9e9;
+    border: 2px solid #636363;
+    margin: 0px 17.25%;
+}
+#add-modal section{
+    padding:30px 20px 30px 20px;
+}
+#add-modal section div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin-bottom:10px;
+}
+#add-modal section label {
+    width: 15%;
+    font-weight: 700;
+}
+#add-modal section div input[type='text'] {
+    width: 75%;
+}
+#add-modal button{
+    color: black;
+    background-color: #d7d7d7;
+    border:0;
+    padding: 10px 20px 10px 20px;
+    font-weight:700;
+    border-radius:5px;
+    font-size:14px;
+    cursor:pointer;
+}
+#add-modal button:hover{
+    background-color: #b9b9b9;
+}
+#add-modal button:active{
+    background-color: #aaaaaa;
+}
+
+#close{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    margin: 0;
+    cursor: pointer;
+}
+#settingsbar{
+    position:relative;
+}
+#settingsbar:hover:after {
+    content: "I couldn't find a use for this";
+    position: absolute;
+    left: -105px;
+    width: 100px;
+    height: auto;
+    background-color: #f4f4f4;
+    padding: 5px 10px 5px 10px;
+    border: 2px solid #b9b9b9;
+}
+
+#searchfield{
+    background-color:transparent;
+    border:none;
+}
+
+#container{
+    text-align: center;
+}

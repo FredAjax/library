@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main id="kindle">
+        <div id="status-bar">
+            <strong>Odin Project Library</strong>
+            <div><img src="assets/wifi.png"><img src="assets/battery.png"><strong>13:37</strong></div>
+        </div>
+        <div id="menu-bar" style="padding:0;">
+            <div id="new-bar">
+                <img src="assets/new.png" style="width:36px;"><p style="text-decoration: underline; width:116px;">Add new book</p>
+            </div>
+            <div id="searchbar">
+                <img src="assets/search.png"><input type="text" name="search" placeholder="Search" id="searchfield">
+            </div>
+            <div id="settingsbar">
+                <img src="assets/settings.png">
+            </div>
+        </div>
+        <div id="books-list">
+            <div id="filters">
+                <div id="left">
+                    <div class="select active">All</div>
+                    <p> | </p>
+                    <div class="select">Read</div>
+                </div>
+                <div id="right">
+                    <strong id="flip-sort">⇅</strong>
+                    <select>
+                        <option value="recent">Recent</option>
+                        <option value="author">Author</option>
+                        <option value="title">Title</option>
+                        <option value="length">Length</option>
+                    </select>
+                </div>
+            </div>
+            <div id="container">
+            </div>
+        </div>
+        <dialog id="add-modal">
+            <p id="close">X</p>
+            <section>
+                <h2 style="margin-bottom:18px;">Add new book</h2>
+                <form id="book-form">
+                <div><label for="title">Title</label> <input type="text" name="title" id="form-title"></div>
+                <div><label for="author">Author</label> <input type="text" name="author" id="form-author"></div>
+                <div><label for="pages">Pages</label> <input type="number" name="pages" id="form-pages" step="1"></div>
+                <div><label for="read">Read?</label> <input type="checkbox" name="read" id="form-read"></div>
+                <button id="add-book-button" type="submit" onclick="Book()">Add to library</button>
+                </form>
+            </section>
+        </dialog>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>
